@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--referencia navbar-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <!--nose para que es-->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css"> 
+  <!--nose para que es-->
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"> 
+  <!--referencias boton dropdown iniciar sesion-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <!--referencias tipo de letra: font-family: 'Open Sans', sans-serif;-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap" rel="stylesheet">
+  <!--referencias login dropdown-->
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <style>
+    /*modificar tamaño, estilo y colores de textos*/
+    h2 {
+      font-size: 24px;
+      text-transform: uppercase;
+      color: #fff;
+      font-weight: 600;
+      margin-bottom: 30px;
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    /*modificar tamaño, estilo y colores de textos*/
+    h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      color: #fff;
+      font-weight: 400;
+      margin-bottom: 30px;
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    h5 { 
+        font-size: 16px; /*tamaño letra*/
+        line-height: 1.375em; 
+        color: #fff; /*color letra*/
+        font-weight: 400;
+        margin-bottom: 30px;
+        font-family: 'Open Sans', sans-serif; /*tipo de letra*/
+    }
+
+    /*para agrandar el tamaño de los inconos y darles color*/
+    .logo {
+      color: #0CB7F2;
+      font-size: 200px;
+    }
+
+    .navbar {
+      /*margin-bottom: 0;*/
+      background-color: #2D006A; /*color navbar*/
+      /*z-index: 9999;*/
+      border: 20; /*barra blanca bajo el navbar*/
+      /*font-size: 12px !important;*/ 
+      /*line-height: 1.42857143 !important;*/
+      /*letter-spacing: 4px;*/
+      /*border-radius: 0;*/
+      font-family: 'Open Sans', sans-serif; /*tipo de letra*/
+    }
+
+    .navbar li a, .navbar .navbar-brand {
+      color: #fff !important; /*letras navbar blancas*/
+    }
+
+    .navbar {
+      font-size: 12px !important; /*tamaño letras navbar*/
+      letter-spacing: 4px; /*distancia entre letras navbar*/
+      /*border-radius: 0;*/
+    }
+
+    .navbar-nav li a:hover, .navbar-nav li.active a {
+      color: #f4511e !important; /*estilo del navbar para que al pasar el mause se cambie de color*/
+      background-color: #fff !important; /*para poner un cuadro blanco al pasar el mause por encima */
+    }
+
+    #login-dp{
+      min-width: 250px; /*dimensiones*/
+      padding: 14px 14px 0; /*dimensiones*/
+      /*overflow:hidden;*/
+      background-color:#2D006A;
+    }
+  </style>
+</head>
+
+<body style=" background-color: #2D006A;"> <!-- color fondo -->
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="home.html">Libros Impresos S.A.</a>
+      </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-left">
+        <li><a class="dropdown-item" href="Quienes Somos.html">Quienes Somos</a></li>
+        <li><a class="dropdown-item" href="Contacto.html">Contacto</a></li>
+      </ul>
+  <!--Iniciar sesion cascada en navbar-->
+    <ul class="nav navbar-nav navbar-right">
+      <li class="dropdown">
+        <a href="##" class="dropdown-toggle" data-toggle="dropdown"><b>Iniciar Sesion</b> 
+          <span class="glyphicon glyphicon-log-in"></span>
+        </a>
+    <ul id="login-dp" class="dropdown-menu">
+      <div class="row">
+        <div class="col-md-12">
+          <center><h5>¿Seguro que quiere Iniciar Sesion?</h5></center>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary btn-block" onclick="location.href='/login/inicioSesion.html';">Iniciar</button>
+      </div>
+        </div>
+      </div>
+    </ul>
+      </li>
+    </ul>
+    </div>  
+    </div>
+  </nav>
+
+  <!-- Container (About Section) -->
+<div id="about" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8">
+      <h2>Quienes Somos</h2><br>
+      <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4><br>
+      <p style="color:#fff">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <br><button class="btn btn-default btn-lg">Mas Informacion</button>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-signal logo"></span>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid bg-grey">
+  <div class="row">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-globe logo slideanim"></span>
+    </div>
+    <div class="col-sm-8">
+      <h2>A donde vamos</h2><br>
+      <h4><strong>MISSION:</strong> Our mission lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4><br>
+      <p style="color:#fff"><strong>VISION:</strong> Our vision Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <br><button class="btn btn-default btn-lg">Mas Informacion</button> 
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

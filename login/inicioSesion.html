@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap" rel="stylesheet">
+
+<style>
+
+/*imagen fondo*/
+  body {
+    font-family: "Lato", sans-serif;
+    background-image: url(https://static3.sodexobeneficios.cl/consumers-web/resources/images/general/tarjeta_retail_banner.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.main-head{
+    height: 150px;
+    background: #FFF;
+}
+
+/*fondo*/
+.sidenav {
+    height: 100%;
+    background-color: #2D006A;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.main {
+    padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+}
+
+@media screen and (max-width: 450px) {
+    .login-form{
+        margin-top: 10%;
+    }
+}
+
+/*letras login*/
+@media screen and (min-width: 768px){
+    .main{
+        margin-left: 40%; 
+        color: #FFF;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 20px
+    }
+
+    .sidenav{
+        width: 40%;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+    }
+
+    .login-form{
+        margin-top: 80%;
+    }
+}
+
+/*color y tamaño letras texto*/
+.login-main-text{
+    margin-top: 20%;
+    padding: 60px;
+    color: #fff;
+}
+
+/*tamaño y formato letra H2*/
+.login-main-text h2{
+    font-weight: 300;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 25px;
+    line-height: 32px;
+    text-align: center;
+}
+
+/*color letra y y fondo boton iniciar Sesion*/
+.btn-black{
+    background-color: #ff0000 !important;
+    color: #fff;
+
+    font-size: 15px
+}
+
+
+</style>
+</head>
+
+<body>
+    <div class="sidenav">
+    <div class="login-main-text">
+       <h2>Libros impresos S.A.<br>Tickets</h2>
+       <!-- <p>Login</p> -->
+    </div>
+ </div>
+ <div class="main">
+    <div class="col-md-6 col-sm-12">
+       <div class="login-form">
+          <form>
+             <div class="form-group">
+                <label>Usuario</label>
+                <input type="text" class="form-control" placeholder="Usuario">
+             </div>
+             <div class="form-group">
+                <label>Contraseña</label>
+                <input type="password" class="form-control" placeholder="Contraseña">
+             </div>
+             <button type="submit" class="btn btn-black">Iniciar Sesion</button>
+          </form>
+       </div>
+    </div>
+    </div>
+
+</body>
+</html>

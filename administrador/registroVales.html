@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--referencia navbar-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!--nose para que es-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css"> 
+    <!--nose para que es-->
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"> 
+    <!--referencias boton dropdown iniciar sesion-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!--referencias tipo de letra: font-family: 'Open Sans', sans-serif;-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap" rel="stylesheet">
+    <!--referencias login dropdown-->
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+    <!------------------------------------------------------------------------------------------------------------>
+
+    <style>
+      h5 { 
+        font-size: 16px; /*tamaño letra*/
+        line-height: 1.375em; 
+        color: #fff; /*color letra*/
+        font-weight: 400;
+        margin-bottom: 30px;
+        font-family: 'Open Sans', sans-serif; /*tipo de letra*/
+      }
+
+      .navbar {
+        /*margin-bottom: 0;*/
+        background-color: #2D006A; /*color navbar*/
+        /*z-index: 9999;*/
+        border: 20; /*barra blanca bajo el navbar*/
+        /*font-size: 12px !important;*/ 
+        /*line-height: 1.42857143 !important;*/
+        /*letter-spacing: 4px;*/
+        /*border-radius: 0;*/
+        font-family: 'Open Sans', sans-serif; /*tipo de letra*/
+      }
+
+      .navbar li a, .navbar .navbar-brand {
+        color: #fff !important; /*letras navbar blancas*/
+      }
+
+      .navbar {
+        font-size: 12px !important; /*tamaño letras navbar*/
+        letter-spacing: 4px; /*distancia entre letras navbar*/
+        /*border-radius: 0;*/
+      }
+
+      .navbar-nav li a:hover, .navbar-nav li.active a {
+        color: #f4511e !important; /*estilo del navbar para que al pasar el mause se cambie de color*/
+        background-color: #fff !important; /*para poner un cuadro blanco al pasar el mause por encima */
+      }
+
+      #login-dp{
+        min-width: 250px; /*dimensiones*/
+        padding: 14px 14px 0; /*dimensiones*/
+        /*overflow:hidden;*/
+        background-color:#2D006A;
+      }
+    </style>
+  </head>
+
+<!------------------------------------------------------------------------------------------------------------>
+
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="homeAdministrador.html">Libros Impresos S.A.</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav navbar-left">
+            <!--<li><a class="dropdown-item" href="xxx">xxx</a></li>-->
+          </ul>
+          <!--cerrar sesion cascada en navbar-->
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Cerrar Sesion</b> <span class="glyphicon glyphicon-log-in"></span></a>
+              <ul id="login-dp" class="dropdown-menu">
+                <li>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <center><h5>¿Seguro que quiere Cerrar Sesion?</h5></center>
+                        <div class="form-group">
+                          <button type="submit" class="btn btn-primary btn-block" onclick="location.href='/home/home.html';">Salir</button>
+                        </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+          </ul>
+          <ul class="nav navbar-nav">
+            <li><a class="dropdown-item" href="registroDelPersonal.html">Registro Del Personal</a></li>
+            <li><a class="dropdown-item" href="registroVales.html">Registro De Vales</a></li>
+            <li><a class="dropdown-item" href="registrarPersonal.html">Registrar Personal</a></li>
+          </ul>
+        </div>  
+      </div>
+    </nav>
+
+<!------------------------------------------------------------------------------------------------------------------------------------------->
+
+    <div class="container">
+      <div class="row">
+          <div class="col-sm-4 mt-5"></div>
+          <div class="col-sm-4 mt-5">
+              <div class="d-flex justify-content-center">
+                  <h2>Registro de vales</h2>                      
+              </div>
+          </div>
+          <div class="col-sm-4 mt-3">
+              <label>Buscar vale:</label> 
+              <div class="d-flex justify-content-center">                                                                                         
+                  <input type="text" class="form-control me-1" placeholder="Buscar">
+                  <button type="submit" class="btn" style="background-color:#FFD100; border-color:black; color:black">Buscar</button>                    
+              </div>
+          </div>
+      </div>        
+      <di class="row">            
+          <div class="col-md-2"></div>
+          <div class="col-md-8 mt-3">
+              <p>En esta tabla el administador anlisar&aacute; la actividad de los vales del personal de la empresa </p>
+              <p>Solo los vales especiliales tendr&aacute; una C y una U, al comienzo como lo son: los vales de usuario y comensal</p>
+              <div class="d-flex justify-content-center">
+                  <table>
+                      <tr>                        
+                          <th>ID Vales</th>
+                          <th>ID personal</th>
+                          <th>Fecha</th>                        
+                          <th>Total Vales</th>
+                          <th>Total consumido</th>                        
+                      </tr>
+                      <tr>
+                          <td>ACB123</td>
+                          <td>A01</td>
+                          <td>20/2/2050</td>
+                          <td>4</td>
+                          <td>8.990</td>
+                      </tr>
+                      <tr>
+                          <td>A489</td>
+                          <td>C203</td>
+                          <td>29/3/2050</td>
+                          <td>3</td>
+                          <td>6.000</td>
+                      </tr>
+                      <tr>
+                          <td>A123</td>
+                          <td>U300</td>
+                          <td>29/3/2050</td>
+                          <td>2</td>
+                          <td>5.000</td>
+                      </tr>
+                  </table>
+              </div>              
+          </div>
+          <div class="col-md-2"></div>
+      </di>
+
+  </body>
+</html>
