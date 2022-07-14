@@ -12,9 +12,10 @@ mongoose.connect(
 const typeDefs = gql`
   type Persona {
     id: ID!
-    rut: String!
     nombre: String!
     apellido:String!
+    rut: String!
+    nombreUsuario: String!
     contrasena: String!
     fechan: String!
     fechac: String!
@@ -25,9 +26,10 @@ const typeDefs = gql`
     message: String
   }
   input PersonaInput {
-    rut: String!
     nombre: String!
     apellido: String!
+    rut: String!
+    nombreUsuario: String!
     contrasena: String!
     fechan: String!
     fechac: String!

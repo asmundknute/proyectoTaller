@@ -3,6 +3,8 @@
   <head>
     <!--referencia navbar-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- ajax jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <!--nose para que es-->
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css"> 
     <!--nose para que es-->
@@ -16,6 +18,60 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap" rel="stylesheet">
     <!--referencias login dropdown-->
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script>
+      function agregarUsuario() {
+          let nombre = document.getElementById('nombre').value;
+          let apellido= document.getElementById('apellido').value;
+          let rut =  document.getElementById('rut').value;
+          let nombreUsuario= document.getElementById('nombreUsuario').value;
+          let contrasena= document.getElementById('contrasena').value;
+          let fechan= document.getElementById('fechan').value;
+          let fechac= document.getElementById('fechac').value;
+          let fondop= document.getElementById('fondop').value;
+          let previcions= document.getElementById('previcions').value;
+          let mutation = `
+          mutation miMutation( $input: PersonaInput) {
+                  addPersona(input: $input){
+                      id
+                      nombre
+                      apellido
+                      rut
+                      nombreUsuario
+                      contrasena
+                      fechan
+                      fechac
+                      fondop
+                      previcions
+                  }
+              }
+          `;
+          $.ajax({
+              type: "POST",
+              url: "http://localhost:8090/graphql",
+              contentType: "application/json",
+              timeout: 15000,
+              data: JSON.stringify({
+                  query: mutation,
+                  variables: {
+                      input: {
+                          nombre: nombre,
+                          apellido: apellido,
+                          rut: rut,
+                          nombreUsuario:nombreUsuario,
+                          contrasena:contrasena,
+                          fechan:fechan,
+                          fechac:fechac,
+                          fondop:fondop,
+                          previcions:previcions,
+                      }
+                  }
+              }),
+              success: function(response) {
+                  alert(",Felicitaciones el Usuario fue agregado correctamente");
+              }
+          })
+      }
+  </script>
 
     <!------------------------------------------------------------------------------------------------------------>
 
@@ -104,67 +160,67 @@
     </nav>
 
 <!------------------------------------------------------------------------------------------------------------------------------------------->
-
-    <div class="container">
-      <div class="row">
-          <div class="col-md-4"></div>
-          <div class="col-md-4 mb-3 mt-3">
-              <div class="d-flex justify-content-center mt-3">
-                  <h2>Registar personal nuevo</h2>
-              </div>
-          </div>
-          <div class="col-md-4"></div>
+    
+<div class="container">
+  <div class="d-flex justify-content-center">
+    <hr>
+    <hr>
+      <center><h2>Agregar Persona</h2></center>
+  </div>
+  <div class="d-flex justify-content-center">
+      <center><p>El administrador podría; ingresar los datos del nuevo empleado de la empresa</p></center>
+  </div>
+  <form action="/action_page.php">
+      <div class="form-group">
+          <label for="nombre">Nombres:</label>
+          <input type="text" class="form-control" id="nombre" name="nombre">
       </div>
-      <div class="row">
-          <div class="col-md-8">
-              <p>El administrador podr&aacute; ingresar los datos del nuevo empleado de la empresa</p>
-              <div class="d-flex justify-content-start">                        
-                  <form>
-                      <div mb-3 mt-3>
-                          <label for="i">RUN:</label>
-                          <input type="run" class="form-control" placeholder="Ingrese RUN">
-                      </div>
-                      <div mb-3>
-                          <label for="h">Nombre:</label>
-                          <input type="nombre" class="form-control" id="h" placeholder="">
-                      </div>
-                      <div mb-3>
-                          <label for="h">Apellido:</label>
-                          <input type="apellido" class="form-control" id="h" placeholder="">
-                      </div>
-                      <div mb-3>
-                          <label for="h">Fecha de nacimiento:</label>
-                          <input type="time" class="form-control" id="h" placeholder="">
-                      </div>
-                      <div mb-3>
-                          <label for="h">Fecha de contrataci&oacute;n:</label>
-                          <input type="time" class="form-control" id="h" placeholder="">
-                      </div>                        
-                      <div mb-3>
-                          <label for="sel1" class="form-label">Fondo de pensiciones</label>
-                          <select class="form-select" id="sel1" name="sellist1">
-                              <option>AFP uno</option>
-                              <option>AFP Modelo</option>
-                              <option>AFP PlanVital</option>
-                              <option>AFP Capital</option>
-                          </select>
-                      </div> 
-                      <div class="mb-3">
-                          <label for="sel1" class="form-label">Fondo de pensiciones:</label>
-                          <select class="form-select" id="sel1" name="sellist1">
-                              <option>Fonasa</option>
-                              <option>Isapre Banmedica</option>
-                              <option>Isapre CruzBlanca</option>
-                              <option>Isapre Nueva Masvida</option>
-                          </select>                                
-                      </div>
-                      <button type="submit" class="btn btn-primary">Guardar</button>                            
-                  </form>                       
-              </div>
-          </div>
-          <div class="col-md-4"></div>
+      <div class="form-group">
+          <label for="apellido">Apellidos:</label>
+          <input type="text" class="form-control" id="apellido" name="apellido">
       </div>
-    </div>
+      <div class="form-group">
+        <label for="rut">Rut:</label>
+        <input type="text" class="form-control" id="rut" name="rut">
+      </div>
+      <div class="form-group">
+        <label for="nombreUsuario">Nombre de Usuario:</label>
+        <input type="text" class="form-control" id="nombreUsuario" name="nombreUsuario">
+      </div>
+      <div class="form-group">
+        <label for="contrasena">Contraseña:</label>
+        <input type="password" class="form-control" id="contrasena" name="contrasena">
+      </div>
+      <div class="form-group">
+          <label for="fecha1">Fecha de Nacimiento:</label>
+          <input type="date" class="form-control" id="fechan" name="fechan">
+      <div class="form-group">
+      <div class="form-group">
+          <label for="fecha2">Fecha de Contratacion:</label>
+          <input type="date" class="form-control" id="fechac" name="fechac">
+      <div class="form-group">
+          <label for="fondop">Fondo de Pensiones</label>
+          <select class="form-select" id="fondop" name="fondop">
+              <option selected>selecciones su fondo</option>
+              <option>AFP uno</option>
+              <option>AFP Modelo</option>
+              <option>AFP PlanVital</option>
+              <option>AFP Capital</option>
+          </select>
+      </div>
+      <div class="form-group">
+          <label for="previcions" class="form-label" id="#">prevision de salud:</label>
+          <select class="form-select" id="previcions" name="previcions">
+              <option selected>selecciones su previcion</option>
+              <option>Fonasa</option>
+              <option>Isapre Banmedica</option>
+              <option>Isapre CruzBlanca</option>
+              <option>Isapre Nueva Masvida</option>
+          </select>
+      </div>
+      <button type="button" onclick="agregarUsuario();" class="btn btn-primary">Agregar</button>
+  </form>
+</div>
 
   </body>
 </html>

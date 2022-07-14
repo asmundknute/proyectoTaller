@@ -1,8 +1,9 @@
 const mongoose = require("mongoose");
 const personaSchema = new mongoose.Schema({
-  rut:String,
   nombre:String,
   apellido:String,
+  rut:String,
+  nombreUsuario:String,
   contrasena:String,
   fechan:String,
   fechac:String,
