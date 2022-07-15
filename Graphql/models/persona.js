@@ -3,6 +3,8 @@ const personaSchema = new mongoose.Schema({
   nombre:String,
   apellido:String,
   rut:String,
+  cargo: String,
+  roll: String,
   nombreUsuario:String,
   contrasena:String,
   fechan:String,

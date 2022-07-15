@@ -15,6 +15,8 @@ const typeDefs = gql`
     nombre: String!
     apellido:String!
     rut: String!
+    cargo: String!
+    roll: String!
     nombreUsuario: String!
     contrasena: String!
     fechan: String!
@@ -29,6 +31,8 @@ const typeDefs = gql`
     nombre: String!
     apellido: String!
     rut: String!
+    cargo: String!
+    roll: String!
     nombreUsuario: String!
     contrasena: String!
     fechan: String!
